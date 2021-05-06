@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Page Basics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <title>Sonification Term Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="How could Pokemon have optimized their games through "Sonification"?">
+  <meta name="author" content="Shehab Ibrahim">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118972038-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-118972038-1');
+  </script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/hoverStates.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+ <!-- On load fade in page -->
+<script>
+$(document).ready(function() {
+    $("body").css("display", "none");
+    $("body").fadeIn(200);
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(100, redirectPage);
+    });
+    function redirectPage() {
+        window.location = linkLocation;
+      }
+});
+</script>
+
+<!-- Navigation Menu -->
+<div class="container">
+  <section class="header">
+    <div class="row" id="menu">
+      <div class="onecolumn" style="margin-top: 10%; margin-bottom:25%;">
+        <ul class="navbar-list">
+        </ul>
+      </div>
+    </div>
+
+<!-- Site heading -->
+  <div class="row">
+    <div class="onecolumn lower-padding">
+      <p id="font-bold">What if Pokemon used <a class="heading-link" href="https://www.youtube.com/watch?v=br_8wXKgtkg" target="_blank">Sonification</a> to optimize their games?</p>
+    </div>
+  </div>
+</section>
+
+
+ <div class="row">
+   <div class="onecolumn">
+     <p class="h1"> What is sonification?</p>
+     <p class="normaltext"> Sonification is the use of data of any form to create audio visualizations. When you think of traditional data visualizations, your mind might go to scatter plots and bar graphs. These are tools that help people make sense of tabular data of multiple dimensions. The problem with this type of data is that is gets increasingly complex to discern after adding multiple dimensions.</p>
+   </div>
+ </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> What does sonification have to do with Pokemon?</p>
+      <p class="normaltext"> Absolutely nothing! But that doesn't mean we can't explore sonification as a use case for pokemon.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> Where can sonification be implemented?</p>
+      <p class="normaltext">There can be many ways to use principles of sonification to enhance the experience of pokemon, however one way that begs for change is the system for a pokemon's cry in the early pokemon games.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <a class= "work"> <img class="thumbnail h1" src="images/soundinpokemon.jpg"> </a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="normaltext">Sound has always been in Pokemon games. And a the franchise has always added features surrounding the cries of pokemon, even if they aren't unique or customizable.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> What is a "Pokemon Cry"? How does it work?</p>
+      <p class="normaltext">For those that don't know, a pokemon's cry is the sound that emits from the game system's speakers when the game declares that there's an interaction with a specific pokemon. So sending a pokemon out to battle or checking it's summary in the menu would trigger a cry.</p>
+      <p class="normaltext">Space was very limited in the past, so there wasn't room to create separate sound files for each unique pokemon. So the developers created a system where each pokemon was assigned a combination of 8-bit tones with pointers that would hold the combination when it was time to play the pokemon's cry.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> Is there a problem with this?</p>
+      <p class="normaltext">The problem exists in the combinations of sounds that were possible. So some pokemon shared the same cry.</p>
+    </div>
+  </div>
+  <div class="row doubleimgspace">
+    <div class="six columns">
+      <div class="portfolio-container" style="margin-left: 5px;">
+        <a class=""> <img class="thumbnail" src="images/charizard.png"> </a>
+        <a class="work"><h2 class="thumbnail-title"><span id="title">Charizard's Cry</span></h2></a>
+        <audio class="audiospace" id="stretch" controls>
+          <source src="images/charcry.mp3" type="audio/mp3">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <div class="six columns">
+      <div class="portfolio-container" style="margin-left: 5px;">
+        <a class=""> <img class="thumbnail objectfit" src="images/rydon.png"> </a>
+        <a class="work"><h2 class="thumbnail-title"><span id="title">Rhydon's Cry</span></h2></a>
+        <audio class="audiospace" id="stretch" controls>
+          <source src="images/rycry.mp3" type="audio/mp3">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <p class="normaltext">These two cries sound... similar right?</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1">Using sonification to develop a new system for pokemon cries.</p>
+      <p class="normaltext">I explored methods for converting data to audio. More specifically: image data into audio.</p>
+      <p class="normaltext">There is currently an open source software called "Photosounder" that converts images into audio through passing pixel information.</p>
+      <p class="normaltext">Below is a test of Photosounder using sprite data for Pikachu, one of the more iconic Pokemon from the franchise. What you will hear is sound that is relational to the pixels in the image.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <a class= "work"> <img class="thumbnail" src="images/pikachusonic.jpg"> </a>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="onecolumn">
+      <audio id="stretch" controls>
+        <source src="images/pikachusound.mp4" type="audio/mp4">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1">Why is this a better alternative?</p>
+      <p class="normaltext">The conceptual model of using image data into audio makes sense because the game wouldn't need to point to an 8-bit combination and take up more bytes. It would simply call the script that passes information on the sprite data that is already instantiated, freeing space.</p>
+      <p class="normaltext">In addition to being more efficient, the audio output would also be more unique. Because all pokemon have unique sprite data. Take the sprite data for charizard and Rhydon for example - using this method, we would generate a unique cry for the both of them.</p>
+    </div>
+  </div>
+  <div class="row doubleimgspace">
+    <div class="six columns">
+      <div class="portfolio-container" style="margin-left: 5px;">
+        <a class=""> <img class="thumbnail" src="images/charizard.png"> </a>
+        <a class="work"><h2 class="thumbnail-title"><span id="title">Charizard's Sonified Cry</span></h2></a>
+        <audio class="audiospace" id="stretch" controls>
+          <source src="images/charcrynew.mp4" type="audio/mp3">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <div class="six columns">
+      <div class="portfolio-container" style="margin-left: 5px;">
+        <a class=> <img class="thumbnail objectfit" src="images/rydon.png"> </a>
+        <a class="work"><h2 class="thumbnail-title"><span id="title">Rhydon's Sonified Cry</span></h2></a>
+        <audio class="audiospace" id="stretch" controls>
+          <source src="images/rycry.mp4" type="audio/mp3">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1">How could we make this even better?</p>
+      <p class="normaltext">We could add parameters for Pokemon type, or nature. Parameters that are already stored in the games meta data that are usually unique to an individual Pokemon.</p>
+      <p class="normaltext">This would help make each pokemon's cry a bit more unique to its counterparts and make the game more immersive and personal as a result.</p>
+    </div>
+  </div>
+    <div class="row">
+        <div class="onecolumn">
+            <ul class="h1">Citations</ul>
+            <ul class="normaltext"><a href="https://www.youtube.com/watch?v=br_8wXKgtkg" target="_blank">Video explaining sonification.</a></ul>
+            <ul class="normaltext"><a href="https://www.youtube.com/watch?v=gDLpbFXnpeY" target="_blank">Video explaining how Pokemon handles cries in Gen 1.</a></ul>
+            <ul class="normaltext"><a href="https://bulbapedia.bulbagarden.net/wiki/Cry" target="_blank">Bulbapedia (repository of pokemon knowledge) article on Pokemon cries.</a></ul>
+            <ul class="normaltext"><a href="https://photosounder.com/documentation.php" target="_blank">Photosounder Software</a></ul>
+        </div>
+    </div>
+  <div class="row">
+    <div class="onecolumn">
+      <a class= "work"> <img class="thumbnail lastpadding" src="images/diamond.gif"> </a>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>
