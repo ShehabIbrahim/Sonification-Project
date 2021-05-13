@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Page Basics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <title>Sonification Term Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="How could Pokémon have optimized their games through "Sonification"?">
+  <meta name="author" content="Shehab Ibrahim">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118972038-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-118972038-1');
+  </script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/hoverStates.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+ <!-- On load fade in page -->
+<script>
+$(document).ready(function() {
+    $("body").css("display", "none");
+    $("body").fadeIn(200);
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(100, redirectPage);
+    });
+    function redirectPage() {
+        window.location = linkLocation;
+      }
+});
+</script>
+
+<!-- Navigation Menu -->
+<div class="container">
+  <section class="header">
+    <div class="row" id="menu">
+      <div class="onecolumn" style="margin-top: 10%; margin-bottom:25%;">
+        <ul class="navbar-list">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="transition, navbar-link" id="active" href="index.html">back home</a></li>
+            </ul>
+        </ul>
+      </div>
+    </div>
+
+<!-- Site heading -->
+  <div class="row">
+    <div class="onecolumn lower-padding">
+      <p id="font-bold">Digital Audio Projects</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> DAP 1</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <audio id="stretch" controls>
+        <source src="images/dap1.mp3" type="audio/mp4">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> DAP 2</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <audio id="stretch" controls>
+        <source src="images/dap2.mp3" type="audio/mp4">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="onecolumn">
+      <p class="h1"> DAP 3</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="onecolumn">
+      <audio id="stretch" controls>
+        <source src="images/dap3.mp3" type="audio/mp4">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+
+
+</div>
+</body>
+</html>
